@@ -22,39 +22,34 @@ operations
     notify()
 end
 
-class Customer
+class ConcreteObserverB
 attributes
-    name:String
 operations
-    addRental()
-    getName()
-    Statement()
+    notify()
 end
 
-class Rental
+class ConcreteObserverC
 attributes
-    daysRented:Integer
 operations
-    getDaysRented()
-    getMovie()
+    notify()
 end
 
-class Movie
-attributes
-    title:String
-    priceCode:Integer
-operations
-    getPriceCode()
-    setPriceCode()
-    getTitle()
+association example1 between
+    Observer[1] role ex1
+    Subject[0] role ex2
 end
 
-association custRentals between
-    Customer[1] role renter
-    Rental[0..*] role rentals
+association example2 between
+    Observer[1] role ex3
+    ConcreteObserverA[0] role ex4
 end
 
-association movRental between
-    Rental[0..*] role movRentals
-    Movie[1] role movie
+association example3 between
+    Observer[1] role ex5
+    ConcreteObserverB[0] role ex6
+end
+
+association example4 between
+    Observer[1] role ex7
+    ConcreteObserverC[0] role ex8
 end
