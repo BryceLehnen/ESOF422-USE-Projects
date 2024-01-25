@@ -1,55 +1,40 @@
 
 model Observer
 
-class Subject
+class MagazineSubscription
 attributes
-    observerCollection:String
+    subscriberCollection:String
 operations
-    registerObserver()
-    unregisterObserver()
-    notifyObservers()
+    registerSubscriber()
+    unregisterSubscriber()
+    notifySubscriber()
 end
 
-class Observer
-attributes
-operations
-    notify()
-end
-
-class ConcreteObserverA
+class Subscriber
 attributes
 operations
     notify()
 end
 
-class ConcreteObserverB
+class SubscriberA < Subscriber
 attributes
 operations
     notify()
 end
 
-class ConcreteObserverC
+class SubscriberB < Subscriber
 attributes
 operations
     notify()
 end
 
-association example1 between
-    Observer[1] role ex1
-    Subject[0] role ex2
+class SubscriberC < Subscriber
+attributes
+operations
+    notify()
 end
 
-association example2 between
-    Observer[1] role ex3
-    ConcreteObserverA[0] role ex4
-end
-
-association example3 between
-    Observer[1] role ex5
-    ConcreteObserverB[0] role ex6
-end
-
-association example4 between
-    Observer[1] role ex7
-    ConcreteObserverC[0] role ex8
+aggregation example1 between
+    MagazineSubscription[0] role ex2
+    Subscriber[1] role ex1
 end
