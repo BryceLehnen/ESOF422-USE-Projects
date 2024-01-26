@@ -59,7 +59,7 @@
                 <hidden>false</hidden>
             </edgeproperty>
             <edgeproperty id="newspaper::source::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="true" visible="true">
-                <name>1</name>
+                <name>0..1</name>
                 <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
                     <userOffsetX>31.0</userOffsetX>
                     <userOffsetY>-7.0</userOffsetY>
@@ -73,8 +73,8 @@
             <edgeproperty id="newspaper::target::rolename" sizeCalculated="true" type="rolename" userDefined="true" visible="true">
                 <name>newspaperSubscriber</name>
                 <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
-                    <userOffsetX>-14.0</userOffsetX>
-                    <userOffsetY>3.0</userOffsetY>
+                    <userOffsetX>-13.0</userOffsetX>
+                    <userOffsetY>-5.0</userOffsetY>
                     <attached>newspaper::WayPoint::1</attached>
                     <offset_x>8</offset_x>
                     <offset_y>8</offset_y>
@@ -82,11 +82,11 @@
                 </strategy>
                 <hidden>false</hidden>
             </edgeproperty>
-            <edgeproperty id="newspaper::target::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+            <edgeproperty id="newspaper::target::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="true" visible="true">
                 <name>*</name>
                 <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
-                    <userOffsetX>0.0</userOffsetX>
-                    <userOffsetY>0.0</userOffsetY>
+                    <userOffsetX>-2.0</userOffsetX>
+                    <userOffsetY>-1.0</userOffsetY>
                     <attached>newspaper::WayPoint::1</attached>
                     <offset_x>8</offset_x>
                     <offset_y>8</offset_y>
@@ -138,11 +138,11 @@
         <target>Subscriber</target>
         <name>movie</name>
         <properties>
-            <edgeproperty id="movie::source::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+            <edgeproperty id="movie::source::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="true" visible="true">
                 <name>1</name>
                 <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
-                    <userOffsetX>0.0</userOffsetX>
-                    <userOffsetY>0.0</userOffsetY>
+                    <userOffsetX>32.0</userOffsetX>
+                    <userOffsetY>9.0</userOffsetY>
                     <attached>movie::WayPoint::0</attached>
                     <offset_x>8</offset_x>
                     <offset_y>8</offset_y>
@@ -150,12 +150,24 @@
                 </strategy>
                 <hidden>false</hidden>
             </edgeproperty>
-            <edgeproperty id="movie::source::rolename" sizeCalculated="true" type="rolename" userDefined="false" visible="true">
+            <edgeproperty id="movie::source::rolename" sizeCalculated="true" type="rolename" userDefined="true" visible="true">
                 <name>movieSubscription</name>
                 <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
-                    <userOffsetX>0.0</userOffsetX>
-                    <userOffsetY>0.0</userOffsetY>
+                    <userOffsetX>4.0</userOffsetX>
+                    <userOffsetY>7.0</userOffsetY>
                     <attached>movie::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="movie::target::rolename" sizeCalculated="true" type="rolename" userDefined="true" visible="true">
+                <name>movieSubscriber</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>3.0</userOffsetX>
+                    <userOffsetY>-37.0</userOffsetY>
+                    <attached>movie::WayPoint::1</attached>
                     <offset_x>8</offset_x>
                     <offset_y>8</offset_y>
                     <placement>TOP</placement>
@@ -165,24 +177,12 @@
             <edgeproperty id="movie::target::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="true" visible="true">
                 <name>*</name>
                 <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
-                    <userOffsetX>5.0</userOffsetX>
-                    <userOffsetY>3.0</userOffsetY>
+                    <userOffsetX>6.0</userOffsetX>
+                    <userOffsetY>6.0</userOffsetY>
                     <attached>movie::WayPoint::1</attached>
                     <offset_x>8</offset_x>
                     <offset_y>8</offset_y>
                     <placement>BOTTOM</placement>
-                </strategy>
-                <hidden>false</hidden>
-            </edgeproperty>
-            <edgeproperty id="movie::target::rolename" sizeCalculated="true" type="rolename" userDefined="true" visible="true">
-                <name>movieSubscriber</name>
-                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
-                    <userOffsetX>47.0</userOffsetX>
-                    <userOffsetY>-28.0</userOffsetY>
-                    <attached>movie::WayPoint::1</attached>
-                    <offset_x>8</offset_x>
-                    <offset_y>8</offset_y>
-                    <placement>TOP</placement>
                 </strategy>
                 <hidden>false</hidden>
             </edgeproperty>
@@ -230,10 +230,10 @@
         <target>Subscriber</target>
         <name>magazine</name>
         <properties>
-            <edgeproperty id="magazine::source::rolename" sizeCalculated="true" type="rolename" userDefined="false" visible="true">
+            <edgeproperty id="magazine::source::rolename" sizeCalculated="true" type="rolename" userDefined="true" visible="true">
                 <name>magazineSubscription</name>
                 <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
-                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetX>-7.0</userOffsetX>
                     <userOffsetY>0.0</userOffsetY>
                     <attached>magazine::WayPoint::0</attached>
                     <offset_x>8</offset_x>
@@ -242,11 +242,11 @@
                 </strategy>
                 <hidden>false</hidden>
             </edgeproperty>
-            <edgeproperty id="magazine::source::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+            <edgeproperty id="magazine::source::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="true" visible="true">
                 <name>1</name>
                 <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
-                    <userOffsetX>0.0</userOffsetX>
-                    <userOffsetY>0.0</userOffsetY>
+                    <userOffsetX>18.0</userOffsetX>
+                    <userOffsetY>21.0</userOffsetY>
                     <attached>magazine::WayPoint::0</attached>
                     <offset_x>8</offset_x>
                     <offset_y>8</offset_y>
@@ -257,8 +257,8 @@
             <edgeproperty id="magazine::target::rolename" sizeCalculated="true" type="rolename" userDefined="true" visible="true">
                 <name>magazineSubscriber</name>
                 <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
-                    <userOffsetX>113.0</userOffsetX>
-                    <userOffsetY>11.0</userOffsetY>
+                    <userOffsetX>117.0</userOffsetX>
+                    <userOffsetY>10.0</userOffsetY>
                     <attached>magazine::WayPoint::1</attached>
                     <offset_x>8</offset_x>
                     <offset_y>8</offset_y>
@@ -269,8 +269,8 @@
             <edgeproperty id="magazine::target::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="true" visible="true">
                 <name>*</name>
                 <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
-                    <userOffsetX>1.0</userOffsetX>
-                    <userOffsetY>-2.0</userOffsetY>
+                    <userOffsetX>12.0</userOffsetX>
+                    <userOffsetY>12.0</userOffsetY>
                     <attached>magazine::WayPoint::1</attached>
                     <offset_x>8</offset_x>
                     <offset_y>8</offset_y>

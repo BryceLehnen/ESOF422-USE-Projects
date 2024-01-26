@@ -69,16 +69,16 @@ end
 */
 
 aggregation magazine between
-    MagazineSubscription[1] role magazineSubscription
+    MagazineSubscription[0..1] role magazineSubscription
     Subscriber[*] role magazineSubscriber
 end
 
 aggregation movie between
-    MovieSubscription[1] role movieSubscription
+    MovieSubscription[0..1] role movieSubscription
     Subscriber[*] role movieSubscriber
 end
 
 aggregation newspaper between
-    NewspaperSubscription[1] role newspaperSubscription
+    NewspaperSubscription[0..1] role newspaperSubscription
     Subscriber[*] role newspaperSubscriber
 end
