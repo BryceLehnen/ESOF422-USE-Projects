@@ -8,33 +8,77 @@ operations
     registerSubscriber()
     unregisterSubscriber()
     notifySubscriber()
+    begin
+    end
+end
+
+class NewspaperSubscription
+attributes
+    subscriberCollection:String
+operations
+    registerSubscriber()
+    unregisterSubscriber()
+    notifySubscriber()
+    begin
+    end
+end
+
+class MovieSubscription
+attributes
+    subscriberCollection:String
+operations
+    registerSubscriber()
+    unregisterSubscriber()
+    notifySubscriber()
+    begin
+    end
 end
 
 class Subscriber
 attributes
 operations
     notify()
+    begin
+    end
 end
 
+/*
 class SubscriberA < Subscriber
 attributes
 operations
     notify()
+    begin
+    end
 end
 
 class SubscriberB < Subscriber
 attributes
 operations
     notify()
+    begin
+    end
 end
 
 class SubscriberC < Subscriber
 attributes
 operations
     notify()
+    begin
+    end
+end
+*/
+
+aggregation magazine between
+    MagazineSubscription[1] role magazineSubscription
+    Subscriber[*] role magazineSubscriber
 end
 
-aggregation example1 between
-    MagazineSubscription[0] role ex2
-    Subscriber[1] role ex1
+aggregation movie between
+    MovieSubscription[1] role movieSubscription
+    Subscriber[*] role movieSubscriber
+end
+
+aggregation newspaper between
+    NewspaperSubscription[1] role newspaperSubscription
+    Subscriber[*] role newspaperSubscriber
 end
