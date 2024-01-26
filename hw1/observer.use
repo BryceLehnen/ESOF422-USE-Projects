@@ -1,6 +1,8 @@
 
 model Observer
 
+-- classes
+
 class MagazineSubscription
 attributes
     subscriberCollection:String
@@ -20,9 +22,10 @@ class NewspaperSubscription
 attributes
     subscriberCollection:String
 operations
-    registerSubscriber()
+    registerSubscriber() : NewspaperSubscription
     begin
-        declare s:Subscriber;
+        declare n:NewspaperSubscription;
+        result := n;
     end
     unregisterSubscriber()
     begin
@@ -52,18 +55,28 @@ attributes
 operations
     register(name:String)
     begin
-        if (name = 'newspaper') then
-        end
+        --declare n:NewspaperSubscription;
+        --n := self.newspaperSubscription.registerSubscriber();
     end
-    unregister(name:String)
+    unregister()
     begin
-        if (name = 'newspaper') then
-        end
     end
     notify()
     begin
     end
 end
+
+class SubscriberA < Subscriber
+attributes
+operations
+end
+
+class SubscriberB < Subscriber
+attributes
+operations
+end
+
+-- associations
 
 aggregation magazine between
     MagazineSubscription[0..1] role magazineSubscription
