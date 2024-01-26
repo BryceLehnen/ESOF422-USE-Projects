@@ -6,7 +6,11 @@ attributes
     subscriberCollection:String
 operations
     registerSubscriber()
+    begin
+    end
     unregisterSubscriber()
+    begin
+    end
     notifySubscriber()
     begin
     end
@@ -17,7 +21,12 @@ attributes
     subscriberCollection:String
 operations
     registerSubscriber()
+    begin
+        declare s:Subscriber;
+    end
     unregisterSubscriber()
+    begin
+    end
     notifySubscriber()
     begin
     end
@@ -28,7 +37,11 @@ attributes
     subscriberCollection:String
 operations
     registerSubscriber()
+    begin
+    end
     unregisterSubscriber()
+    begin
+    end
     notifySubscriber()
     begin
     end
@@ -37,36 +50,20 @@ end
 class Subscriber
 attributes
 operations
+    register(name:String)
+    begin
+        if (name = 'newspaper') then
+        end
+    end
+    unregister(name:String)
+    begin
+        if (name = 'newspaper') then
+        end
+    end
     notify()
     begin
     end
 end
-
-/*
-class SubscriberA < Subscriber
-attributes
-operations
-    notify()
-    begin
-    end
-end
-
-class SubscriberB < Subscriber
-attributes
-operations
-    notify()
-    begin
-    end
-end
-
-class SubscriberC < Subscriber
-attributes
-operations
-    notify()
-    begin
-    end
-end
-*/
 
 aggregation magazine between
     MagazineSubscription[0..1] role magazineSubscription
