@@ -1,0 +1,108 @@
+
+model Bridge
+
+-- classes
+
+class TicketPricer
+attributes
+operations
+end
+
+class TicketAgeBehavior
+attributes
+operations
+end
+
+class TicketDiscountBehavior
+attributes
+operations
+end
+
+class ChildAge
+attributes
+operations
+end
+
+class AdultAge
+attributes
+operations
+end
+
+class SeniorAge
+attributes
+operations
+end
+
+class NoDiscount
+attributes
+operations
+end
+
+class AARPDiscount
+attributes
+operations
+end
+
+class MilitaryDiscount
+attributes
+operations
+end
+
+-- inheritance
+
+class ChildTicket < TicketPricer
+attributes
+operations
+end
+
+class AdultTicket < TicketPricer
+attributes
+operations
+end
+
+class SeniorTicket < TicketPricer
+attributes
+operations
+end
+
+-- associations
+
+association assoc1 between
+    TicketAgeBehavior[1] role ex1
+    TicketPricer[1] role ex2
+end
+
+association assoc2 between
+    TicketDiscountBehavior[1] role ex9
+    TicketPricer[1] role ex10
+end
+
+association interface1 between
+    TicketAgeBehavior[1] role ex3
+    ChildAge[1] role ex4
+end
+
+association interface2 between
+    TicketAgeBehavior[1] role ex5
+    AdultAge[1] role ex6
+end
+
+association interface3 between
+    TicketAgeBehavior[1] role ex7
+    SeniorAge[1] role ex8
+end
+
+association interface4 between
+    TicketDiscountBehavior[1] role ex11
+    NoDiscount[1] role ex12
+end
+
+association interface5 between
+    TicketDiscountBehavior[1] role ex13
+    AARPDiscount[1] role ex14
+end
+
+association interface6 between
+    TicketDiscountBehavior[1] role ex15
+    MilitaryDiscount[1] role ex16
+end

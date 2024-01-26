@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="windows-1252"?><diagram_Layout version="13">
+    <diagramOptions>
+        <autolayout>false</autolayout>
+        <antialiasing>true</antialiasing>
+        <showassocnames>false</showassocnames>
+        <showattributes>true</showattributes>
+        <showmultiplicities>true</showmultiplicities>
+        <showoperations>true</showoperations>
+        <showrolenames>true</showrolenames>
+        <showgrid>true</showgrid>
+    </diagramOptions>
+    <node id="TicketAgeBehavior" sizeCalculated="true" type="Class">
+        <name>TicketAgeBehavior</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+            <x>20.0</x>
+            <y>416.0</y>
+        </strategy>
+        <hidden>false</hidden>
+    </node>
+    <node id="AARPDiscount" sizeCalculated="true" type="Class">
+        <name>AARPDiscount</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+            <x>424.0</x>
+            <y>416.0</y>
+        </strategy>
+        <hidden>false</hidden>
+    </node>
+    <node id="ChildAge" sizeCalculated="true" type="Class">
+        <name>ChildAge</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+            <x>452.0</x>
+            <y>184.53740154996336</y>
+        </strategy>
+        <hidden>false</hidden>
+    </node>
+    <node id="TicketPricer" sizeCalculated="true" type="Class">
+        <name>TicketPricer</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+            <x>20.0</x>
+            <y>266.6832733640757</y>
+        </strategy>
+        <hidden>false</hidden>
+    </node>
+    <node id="MilitaryDiscount" sizeCalculated="true" type="Class">
+        <name>MilitaryDiscount</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+            <x>218.7976128732543</x>
+            <y>203.3368593119067</y>
+        </strategy>
+        <hidden>false</hidden>
+    </node>
+    <node id="NoDiscount" sizeCalculated="true" type="Class">
+        <name>NoDiscount</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+            <x>237.53916208601862</x>
+            <y>20.0</y>
+        </strategy>
+        <hidden>false</hidden>
+    </node>
+    <node id="SeniorAge" sizeCalculated="true" type="Class">
+        <name>SeniorAge</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+            <x>444.0</x>
+            <y>20.0</y>
+        </strategy>
+        <hidden>false</hidden>
+    </node>
+    <node id="TicketDiscountBehavior" sizeCalculated="true" type="Class">
+        <name>TicketDiscountBehavior</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+            <x>181.44872476325253</x>
+            <y>416.0</y>
+        </strategy>
+        <hidden>false</hidden>
+    </node>
+    <node id="AdultAge" sizeCalculated="true" type="Class">
+        <name>AdultAge</name>
+        <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyFixed">
+            <x>20.0</x>
+            <y>20.0</y>
+        </strategy>
+        <hidden>false</hidden>
+    </node>
+    <edge type="BinaryEdge">
+        <source>TicketAgeBehavior</source>
+        <target>TicketPricer</target>
+        <name>interface1</name>
+        <properties>
+            <edgeproperty id="interface1::source::rolename" sizeCalculated="true" type="rolename" userDefined="false" visible="true">
+                <name>ex1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>interface1::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="interface1::source::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+                <name>1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>interface1::WayPoint::0</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="interface1::target::rolename" sizeCalculated="true" type="rolename" userDefined="false" visible="true">
+                <name>ex2</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>interface1::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="interface1::target::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
+                <name>1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>interface1::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>BOTTOM</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="interface1::AssociationName" sizeCalculated="true" type="associationName" userDefined="false" visible="true">
+                <name>interface1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyInBetween">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <offsetX>0.0</offsetX>
+                    <offsetY>-10.0</offsetY>
+                    <related length="2">
+                        <related0>interface1::WayPoint::0</related0>
+                        <related1>interface1::WayPoint::1</related1>
+                    </related>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+        </properties>
+        <waypoints>
+            <edgeproperty id="interface1::WayPoint::0" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+                <name>0</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                </strategy>
+                <id>0</id>
+                <specialid>1</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="interface1::WayPoint::1" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+                <name>1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                </strategy>
+                <id>1</id>
+                <specialid>2</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+        </waypoints>
+        <hidden>false</hidden>
+    </edge>
+</diagram_Layout>

@@ -78,18 +78,6 @@
                 </strategy>
                 <hidden>false</hidden>
             </edgeproperty>
-            <edgeproperty id="example1::target::rolename" sizeCalculated="true" type="rolename" userDefined="false" visible="true">
-                <name>ex1</name>
-                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
-                    <userOffsetX>0.0</userOffsetX>
-                    <userOffsetY>0.0</userOffsetY>
-                    <attached>example1::WayPoint::1</attached>
-                    <offset_x>8</offset_x>
-                    <offset_y>8</offset_y>
-                    <placement>TOP</placement>
-                </strategy>
-                <hidden>false</hidden>
-            </edgeproperty>
             <edgeproperty id="example1::target::multiplicity" sizeCalculated="true" type="multiplicity" userDefined="false" visible="true">
                 <name>1</name>
                 <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
@@ -99,6 +87,18 @@
                     <offset_x>8</offset_x>
                     <offset_y>8</offset_y>
                     <placement>BOTTOM</placement>
+                </strategy>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="example1::target::rolename" sizeCalculated="true" type="rolename" userDefined="false" visible="true">
+                <name>ex1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyRelativeToAttached">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                    <attached>example1::WayPoint::1</attached>
+                    <offset_x>8</offset_x>
+                    <offset_y>8</offset_y>
+                    <placement>TOP</placement>
                 </strategy>
                 <hidden>false</hidden>
             </edgeproperty>
@@ -158,6 +158,64 @@
                 <hidden>false</hidden>
             </edgeproperty>
             <edgeproperty id="Generalization::SubscriberA::Subscriber::WayPoint::1" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+                <name>1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                </strategy>
+                <id>1</id>
+                <specialid>2</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+        </waypoints>
+        <hidden>false</hidden>
+    </edge>
+    <edge type="Generalization">
+        <source>SubscriberB</source>
+        <target>Subscriber</target>
+        <name>Inheritance</name>
+        <properties/>
+        <waypoints>
+            <edgeproperty id="Generalization::SubscriberB::Subscriber::WayPoint::0" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+                <name>0</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                </strategy>
+                <id>0</id>
+                <specialid>1</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="Generalization::SubscriberB::Subscriber::WayPoint::1" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+                <name>1</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                </strategy>
+                <id>1</id>
+                <specialid>2</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+        </waypoints>
+        <hidden>false</hidden>
+    </edge>
+    <edge type="Generalization">
+        <source>SubscriberC</source>
+        <target>Subscriber</target>
+        <name>Inheritance</name>
+        <properties/>
+        <waypoints>
+            <edgeproperty id="Generalization::SubscriberC::Subscriber::WayPoint::0" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
+                <name>0</name>
+                <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
+                    <userOffsetX>0.0</userOffsetX>
+                    <userOffsetY>0.0</userOffsetY>
+                </strategy>
+                <id>0</id>
+                <specialid>1</specialid>
+                <hidden>false</hidden>
+            </edgeproperty>
+            <edgeproperty id="Generalization::SubscriberC::Subscriber::WayPoint::1" sizeCalculated="true" type="WayPoint" userDefined="false" visible="true">
                 <name>1</name>
                 <strategy type="org.tzi.use.gui.views.diagrams.elements.positioning.StrategyAttachedIntersection">
                     <userOffsetX>0.0</userOffsetX>
