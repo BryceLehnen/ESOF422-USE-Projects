@@ -43,6 +43,10 @@ operations
             end;
             result:=wrkCh;
         end
+    
+    getTotalCharge()
+        begin
+        end
 
         Statement()
             begin
@@ -73,6 +77,10 @@ operations
     getMovie(): Movie
         begin
             result := self.movie;
+        end
+
+    getCharge()
+        begin
         end
 end
 
@@ -134,4 +142,3 @@ context Customer
     inv agreement:rentals->size = numRen
     inv rentals:rentals->notEmpty
     inv daysRented:rentals->select(daysRented > 3)->notEmpty
-    
