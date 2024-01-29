@@ -46,10 +46,17 @@ operations
         end
 */
 
-    getTotalCharge()
+    getTotalCharge():Real
         begin
+            declare total:Real, aCharge:Charge, m:Movie, ch:Real;
+            total:=0;
+            for ren in self.rentals do
+                ch:=ren.getCharge();
+                total:=total + ch;
+            end;
+            result:=total;
         end
-
+/*
         Statement()
             begin
                 declare aCharge:Charge, sm:Movie, ch:Real, t:String;
@@ -62,9 +69,10 @@ operations
                     aCharge.chVal:=ch;
                     aCharge.chT:=t;
                     insert(self,aCharge) into customerCharges
-                    end
-                end
+                end;
             end
+*/
+end
 
 class Rental
 attributes
