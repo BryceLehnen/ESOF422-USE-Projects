@@ -14,13 +14,21 @@
 !set reg.title := 'Regular'
 !set reg.priceCode := PriceCode::regular
 !set fam.title := 'Family'
-!set fam.priceCode := PriceCode::family 
+!set fam.priceCode := PriceCode::family
 !set newr.title := 'New Release'
-!set newr.priceCode := PriceCode::newRelease 
+!set newr.priceCode := PriceCode::newRelease
+
+!set rent1.daysRented := 1
+!set rent2.daysRented := 2
+!set rent3.daysRented := 3
 
 -- insert associations
 !insert (cust, rent1) into custRentals
 !insert (cust, rent2) into custRentals
 !insert (cust, rent3) into custRentals
+
+!insert (rent1, reg) into movRental
+!insert (rent2, fam) into movRental
+!insert (rent3, newr) into movRental
 
 !cust.Statement()
