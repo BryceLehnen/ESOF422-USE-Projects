@@ -56,13 +56,13 @@ operations
             end;
             result:=total;
         end
-/*
+
         Statement()
             begin
                 declare aCharge:Charge, sm:Movie, ch:Real, t:String;
                 self.numRen:=self.rentals->size();
                 for ren in self.rentals do
-                    ch:=self.getAmount(ren);
+                    ch:=ren.getCharge();
                     sm:=ren.getMovie();
                     t:=sm.getTitle();
                     aCharge:= new Charge;
@@ -71,7 +71,6 @@ operations
                     insert(self,aCharge) into customerCharges
                 end;
             end
-*/
 end
 
 class Rental
