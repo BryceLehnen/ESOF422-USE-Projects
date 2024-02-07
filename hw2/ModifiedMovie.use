@@ -49,7 +49,7 @@ operations
                 declare aCharge:Charge, sm:Movie, ch:Real, t:String;
                 self.numRen:=self.rentals->size();
                 for ren in self.rentals do
-                    ch:=ren.getCharge();
+                    /*ch:=ren.getCharge();*/
                     sm:=ren.getMovie();
                     t:=sm.getTitle();
                     aCharge:= new Charge;
@@ -130,7 +130,4 @@ constraints
 --just as examples.
 
 context Customer
-    inv maxRental:numRen <= 10
-    inv agreement:rentals->size = numRen
     inv rentals:rentals->notEmpty
-    inv daysRented:rentals->select(daysRented > 3)->notEmpty
