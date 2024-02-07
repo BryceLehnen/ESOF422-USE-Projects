@@ -53,12 +53,12 @@ association represents between
     RemoteAuthenticator [1]
 end
 
-composition ex1 between
+composition authenticators between
     RemoteAuthenticator [1]
     Authenticator [1]
 end
 
-composition ex2 between
+composition authorizers between
     RemoteAuthenticator [1]
     Authorizer [1]
 end
