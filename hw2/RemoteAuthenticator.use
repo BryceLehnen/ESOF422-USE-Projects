@@ -1,0 +1,64 @@
+
+model RemoteAuthenticator
+
+--classes
+
+class Client
+attributes
+operations
+    request()
+        begin
+        end
+end
+
+class AuthenticatorAuthorizer
+attributes
+operations
+    requestAccess()
+        begin
+        end
+end
+
+class ProxyAuthenticator < AuthenticatorAuthorizer
+attributes
+operations
+    requestAccess()
+        begin
+        end
+end
+
+class RemoteAuthenticator < AuthenticatorAuthorizer
+attributes
+operations
+    requestAccess()
+        begin
+        end
+end
+
+class Authenticator
+end
+
+class Authorizer
+end
+
+--associations
+
+association request between
+    Client [*]
+    AuthenticatorAuthorizer [*]
+end
+
+association represents between
+    ProxyAuthenticator [1]
+    RemoteAuthenticator [1]
+end
+
+composition ex1 between
+    RemoteAuthenticator [1]
+    Authenticator [1]
+end
+
+composition ex2 between
+    RemoteAuthenticator [1]
+    Authorizer [1]
+end
