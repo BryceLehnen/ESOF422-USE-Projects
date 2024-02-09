@@ -8,6 +8,10 @@ attributes
 operations
     request()
         begin
+            declare p:ProxyAuthenticator;
+            p := new ProxyAuthenticator;
+            p.requestAccess();
+            p.requestResource();
         end
 end
 
@@ -17,6 +21,10 @@ operations
     requestAccess()
         begin
         end
+
+    requestResource()
+        begin
+        end
 end
 
 class ProxyAuthenticator < AuthenticatorAuthorizer
@@ -24,6 +32,16 @@ attributes
 operations
     requestAccess()
         begin
+            declare r:RemoteAuthenticator;
+            r := new RemoteAuthenticator;
+            r.requestAccess();
+        end
+        
+    requestResource()
+        begin
+            declare r:RemoteAuthenticator;
+            r := new RemoteAuthenticator;
+            r.requestResource();
         end
 end
 
@@ -32,33 +50,51 @@ attributes
 operations
     requestAccess()
         begin
+            declare authen:Authenticator;
+            authen := new Authenticator;
+            authen.requestAccess();
+        end
+        
+    requestResource()
+        begin
+            declare author:Authorizer;
+            author := new Authorizer;
+            author.requestResource();
         end
 end
 
 class Authenticator
+operations
+    requestAccess()
+        begin
+        end
 end
 
 class Authorizer
+operations
+    requestResource()
+        begin
+        end
 end
 
 --associations
 
 association request between
-    Client [*]
-    AuthenticatorAuthorizer [*]
+    Client [*] role client
+    AuthenticatorAuthorizer [*] role aa
 end
 
 association represents between
-    ProxyAuthenticator [1]
-    RemoteAuthenticator [1]
+    ProxyAuthenticator [1] role pa
+    RemoteAuthenticator [1] role ra
 end
 
 composition authenticators between
-    RemoteAuthenticator [1]
-    Authenticator [1]
+    RemoteAuthenticator [1] role remote
+    Authenticator [1] role authen
 end
 
 composition authorizers between
-    RemoteAuthenticator [1]
-    Authorizer [1]
+    RemoteAuthenticator [1] role remote
+    Authorizer [1] role author
 end
